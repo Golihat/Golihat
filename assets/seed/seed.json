@@ -1,0 +1,1074 @@
+{
+  "settings": {
+    "dimensions": {
+      "comfort": {},
+      "jordig": {},
+      "hetta": {},
+      "syra": {},
+      "street": {},
+      "umami": {},
+      "fine": {},
+      "fräsch": {},
+      "sötma": {},
+      "salt": {}
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "title": "Vilken tallrik lockar idag?",
+      "choices": [
+        {
+          "title": "Köttbullar med potatis",
+          "weights": {
+            "comfort": 7,
+            "umami": 5,
+            "jordig": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Citronkyckling med örter",
+          "weights": {
+            "fräsch": 3,
+            "syra": 3,
+            "comfort": 5
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Vegobiff med gräddsås",
+          "weights": {
+            "comfort": 6,
+            "umami": 4,
+            "jordig": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "title": "Vad blir din snabbmat?",
+      "choices": [
+        {
+          "title": "Taco",
+          "weights": {
+            "street": 6,
+            "hetta": 3,
+            "sötma": 2
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Falafel",
+          "weights": {
+            "street": 5,
+            "fräsch": 3,
+            "syra": 2
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Sushi",
+          "weights": {
+            "fräsch": 6,
+            "syra": 5,
+            "fine": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "title": "Chilinivå?",
+      "choices": [
+        {
+          "title": "Mild",
+          "weights": {
+            "hetta": 1,
+            "comfort": 2
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Lagom",
+          "weights": {
+            "hetta": 4,
+            "street": 2
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Sting",
+          "weights": {
+            "hetta": 7,
+            "street": 3,
+            "syra": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "title": "Grillkvällens val?",
+      "choices": [
+        {
+          "title": "Glaze & rök",
+          "weights": {
+            "hetta": 4,
+            "umami": 6,
+            "sötma": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Grönsaker & örter",
+          "weights": {
+            "jordig": 5,
+            "umami": 3,
+            "fräsch": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Kryddig korv",
+          "weights": {
+            "hetta": 5,
+            "umami": 4,
+            "street": 4
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "title": "Syra i rätten?",
+      "choices": [
+        {
+          "title": "Tydlig citrus",
+          "weights": {
+            "syra": 7,
+            "fräsch": 4
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Lite picklat",
+          "weights": {
+            "syra": 6,
+            "street": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Mjuk syra",
+          "weights": {
+            "comfort": 4,
+            "umami": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "title": "Basfavorit?",
+      "choices": [
+        {
+          "title": "Svamp/rotsaker",
+          "weights": {
+            "jordig": 6,
+            "umami": 6,
+            "comfort": 4
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Färska örter",
+          "weights": {
+            "syra": 4,
+            "fräsch": 5
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Soja/miso",
+          "weights": {
+            "umami": 6,
+            "fräsch": 3,
+            "syra": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "title": "Street cravings?",
+      "choices": [
+        {
+          "title": "Krisp + sött",
+          "weights": {
+            "street": 7,
+            "sötma": 3,
+            "umami": 4
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Koriander + lime",
+          "weights": {
+            "street": 7,
+            "fräsch": 4,
+            "syra": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Chiliolja",
+          "weights": {
+            "street": 7,
+            "hetta": 5,
+            "syra": 2
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "title": "Side till huvudrätt?",
+      "choices": [
+        {
+          "title": "Sallad",
+          "weights": {
+            "fräsch": 5,
+            "syra": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Rostad potatis",
+          "weights": {
+            "jordig": 6,
+            "comfort": 4
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Kimchi",
+          "weights": {
+            "hetta": 4,
+            "fräsch": 4,
+            "syra": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "title": "Middagstyp?",
+      "choices": [
+        {
+          "title": "Små eleganta rätter",
+          "weights": {
+            "fine": 7,
+            "fräsch": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Rejäl husman",
+          "weights": {
+            "comfort": 6,
+            "jordig": 4,
+            "umami": 4
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Mix & match",
+          "weights": {
+            "street": 4,
+            "fräsch": 3,
+            "fine": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "title": "Citrus i maten?",
+      "choices": [
+        {
+          "title": "Ja, gärna",
+          "weights": {
+            "syra": 4,
+            "fräsch": 4
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Ibland",
+          "weights": {
+            "fräsch": 3,
+            "comfort": 2
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Sällan",
+          "weights": {
+            "hetta": 2,
+            "umami": 2
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "title": "Såsprofil?",
+      "choices": [
+        {
+          "title": "Sötstark glaze",
+          "weights": {
+            "sötma": 4,
+            "hetta": 3,
+            "umami": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Syrlig vinägrett",
+          "weights": {
+            "syra": 4,
+            "fräsch": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Krämig",
+          "weights": {
+            "umami": 4,
+            "comfort": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "title": "Vego vs kött?",
+      "choices": [
+        {
+          "title": "Grönt först",
+          "weights": {
+            "jordig": 4,
+            "umami": 3,
+            "fräsch": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Båda funkar",
+          "weights": {
+            "syra": 2,
+            "fräsch": 2,
+            "fine": 2
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Kött/kyckling",
+          "weights": {
+            "hetta": 3,
+            "umami": 4,
+            "comfort": 2
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "title": "Kryddhyllan?",
+      "choices": [
+        {
+          "title": "Örter/citrus",
+          "weights": {
+            "fräsch": 5,
+            "syra": 4,
+            "fine": 2
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Timjan/peppar",
+          "weights": {
+            "jordig": 4,
+            "comfort": 3,
+            "umami": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Chili/soja",
+          "weights": {
+            "hetta": 5,
+            "umami": 4,
+            "street": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "title": "Textur?",
+      "choices": [
+        {
+          "title": "Krisp + kräm",
+          "weights": {
+            "street": 4,
+            "umami": 3,
+            "syra": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Silkeslen",
+          "weights": {
+            "fine": 3,
+            "fräsch": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Rustik",
+          "weights": {
+            "comfort": 3,
+            "jordig": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "title": "Vardagsrätt?",
+      "choices": [
+        {
+          "title": "Gryta",
+          "weights": {
+            "comfort": 4,
+            "jordig": 4,
+            "umami": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Bowl",
+          "weights": {
+            "fräsch": 4,
+            "syra": 3,
+            "street": 3
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Wok",
+          "weights": {
+            "hetta": 3,
+            "umami": 4,
+            "sötma": 2
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "title": "Fräschör?",
+      "choices": [
+        {
+          "title": "Mycket",
+          "weights": {
+            "fräsch": 5,
+            "syra": 4
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Lagom",
+          "weights": {
+            "fräsch": 4,
+            "umami": 3,
+            "comfort": 2
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Låg",
+          "weights": {
+            "comfort": 3,
+            "umami": 2
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "title": "Middagsupplägg?",
+      "choices": [
+        {
+          "title": "Plock/dela",
+          "weights": {
+            "street": 4,
+            "hetta": 3,
+            "fräsch": 2
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Sittning",
+          "weights": {
+            "fine": 4,
+            "comfort": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Storform",
+          "weights": {
+            "comfort": 4,
+            "sötma": 2
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "title": "Kick?",
+      "choices": [
+        {
+          "title": "Syra-kick",
+          "weights": {
+            "syra": 6
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Chili-kick",
+          "weights": {
+            "hetta": 6
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Umami-kick",
+          "weights": {
+            "umami": 6
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "title": "Kvällens stämning?",
+      "choices": [
+        {
+          "title": "Stilrent",
+          "weights": {
+            "fine": 5,
+            "fräsch": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Mysigt",
+          "weights": {
+            "comfort": 4,
+            "street": 3,
+            "fräsch": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Rustikt",
+          "weights": {
+            "jordig": 4,
+            "umami": 4,
+            "comfort": 4
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "title": "Final touch?",
+      "choices": [
+        {
+          "title": "Citrus/örtolja",
+          "weights": {
+            "fräsch": 6,
+            "syra": 5
+          },
+          "vegetarian": true,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Brynt smör",
+          "weights": {
+            "jordig": 5,
+            "umami": 5,
+            "comfort": 3
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        },
+        {
+          "title": "Sötstark glaze",
+          "weights": {
+            "sötma": 5,
+            "hetta": 5
+          },
+          "vegetarian": false,
+          "vegan": false,
+          "image": ""
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "slug": "passionerad-grillare",
+      "name": "Den Passionerade Grillaren",
+      "keywords": [
+        "Rökig",
+        "Generös",
+        "Orädd"
+      ],
+      "match_dimensions": {
+        "hetta": 80,
+        "umami": 75,
+        "sötma": 45,
+        "comfort": 55,
+        "street": 50,
+        "fräsch": 35,
+        "syra": 30,
+        "jordig": 40,
+        "fine": 25,
+        "salt": 50
+      },
+      "horoscope_default": "**Glödbäddens mästare**\nDu tänker i lågor och lager... \n★ Rök + hetta i balans\n★ Toppkoll på karamellisering\n★ Delningsvänlig mat som samlar folk\n★ Eleganta glaze-lager\n★ Modig men aldrig skarp",
+      "horoscope": "Du behandlar glöd som andra behandlar semester. Du vet att smaken vaknar när ytan får färg och doften börjar tala. Du lägger grönsaker, ost, svamp eller det protein som råkar finnas på gallret och ger dem tid. Du jobbar med kontraster som söt glaze, frisk citrus och en lagom hetta. Du har en het zon för show och en lugn zon för återhämtning. Du låter maten vila innan du skär upp och du bjuder gärna runt för att allt blir roligare när flera får smaka. Du ställer fram krispig sallad, gott bröd och en enkel sås som gör sitt utan drama. Du använder rök som en krydda, inte som en dimridå. Du grillar inte för att imponera, du grillar för att det är det mest logiska sättet att skapa djup. När askan svalnar känns middagen självklar, och kylskåpet har sällan haft så snygga matlådor.",
+      "image": "assets/share/kbsp-passionerad-grillare.png"
+    },
+    {
+      "slug": "trygg-husman",
+      "name": "Den Trygga Husmansälskaren",
+      "keywords": [
+        "Varm",
+        "Balanserad",
+        "Klassisk"
+      ],
+      "match_dimensions": {
+        "comfort": 85,
+        "umami": 60,
+        "jordig": 55,
+        "sötma": 35,
+        "hetta": 20,
+        "syra": 25,
+        "street": 20,
+        "fräsch": 30,
+        "fine": 25,
+        "salt": 45
+      },
+      "horoscope_default": "**Värme, vardagslyx och tradition**\nHemmakär smak... \n★ Harmoni före hetta\n★ Långkok och schyssta råvaror\n★ Texturkontraster med omsorg\n★ Syran som service\n★ Mätta, glada gäster",
+      "horoscope": "Du tycker om när potatis, sås och något stekt hälsar artigt och alla vet sin roll. Du vet att lök behöver tid, att smör kan brynas och att en redning mår bra av tålamod. Du gillar pressgurka, rårörda lingon och senap som förstärker utan att ta över. Du låter kryddpeppar och lagerblad arbeta i bakgrunden. Du byter köttbullar mot svampbollar när det passar och världen snurrar vidare. Du lagar mat som smakar som du minns den, men med lite skarpare kanter. Du serverar på djupa tallrikar som fångar upp allt som rinner. Du är generös med nykokt potatis och en liten klick som smälter där den landar. Du uppfinner inga regler, du följer de som fungerar. Du blir glad när såsen blir blank och bordet tystnar. Du sparar en portion och känner dig nöjd med din planering.",
+      "image": "assets/share/kbsp-trygg-husman.png"
+    },
+    {
+      "slug": "frisk-frasche-fantasten",
+      "name": "Den Friska Fräschisten",
+      "keywords": [
+        "Citrus",
+        "Örter",
+        "Lätt"
+      ],
+      "match_dimensions": {
+        "fräsch": 85,
+        "syra": 80,
+        "street": 40,
+        "fine": 45,
+        "umami": 35,
+        "hetta": 30,
+        "comfort": 25,
+        "jordig": 20,
+        "sötma": 30,
+        "salt": 40
+      },
+      "horoscope_default": "**Krisp, klarhet och citrus**\nDu lever för ren smak...\n★ Pigga syror\n★ Örtighet med precision\n★ Krispig textur\n★ Lätta proteiner\n★ Djup i bakgrunden"
+    },
+    {
+      "slug": "street-smart",
+      "name": "Den Street Smarta",
+      "keywords": [
+        "Lekfull",
+        "Snabb",
+        "Textur"
+      ],
+      "match_dimensions": {
+        "street": 85,
+        "hetta": 65,
+        "syra": 55,
+        "umami": 55,
+        "fräsch": 45,
+        "comfort": 30,
+        "jordig": 25,
+        "sötma": 40,
+        "fine": 20,
+        "salt": 50
+      },
+      "horoscope_default": "**Lekfullt, högt tempo och textur**\nDu mixar smaker som en DJ...\n★ Kontraster som poppar\n★ Fingerfood\n★ Citrus + chili\n★ Signatursåser\n★ Socialt och snabbt"
+    },
+    {
+      "slug": "fin-finess",
+      "name": "Den Fina Finessen",
+      "keywords": [
+        "Elegant",
+        "Noggrann",
+        "Lager"
+      ],
+      "match_dimensions": {
+        "fine": 85,
+        "umami": 60,
+        "fräsch": 55,
+        "syra": 45,
+        "comfort": 30,
+        "hetta": 20,
+        "jordig": 35,
+        "sötma": 25,
+        "street": 20,
+        "salt": 35
+      },
+      "horoscope_default": "**Precision, balans och rena linjer**\nSommelier-tänk...\n★ Rena smaker\n★ Textur i lager\n★ Kryddor som viskar\n★ Exakta syror\n★ Elegant vardagslyx"
+    },
+    {
+      "slug": "jordnara",
+      "name": "Den Jordnära",
+      "keywords": [
+        "Rostad",
+        "Djup",
+        "Skog"
+      ],
+      "match_dimensions": {
+        "jordig": 85,
+        "umami": 70,
+        "comfort": 50,
+        "fräsch": 30,
+        "syra": 25,
+        "hetta": 20,
+        "sötma": 30,
+        "street": 15,
+        "fine": 35,
+        "salt": 45
+      },
+      "horoscope_default": "**Djup, rostat och skog**\nLugn i jordiga smaker...\n★ Rostat djup\n★ Svamp-umami\n★ Robust textur\n★ Skogsörter\n★ Lågmäld hetta"
+    },
+    {
+      "slug": "sot-stark",
+      "name": "Den Sött-Starka",
+      "keywords": [
+        "Glaze",
+        "Karaktär",
+        "Karamell"
+      ],
+      "match_dimensions": {
+        "sötma": 75,
+        "hetta": 70,
+        "umami": 60,
+        "street": 55,
+        "comfort": 45,
+        "syra": 35,
+        "fräsch": 30,
+        "jordig": 25,
+        "fine": 20,
+        "salt": 50
+      },
+      "horoscope_default": "**Kontrasten som kittlar**\nMellan karamell och chili...\n★ Sött + starkt i balans\n★ Glaze som glans\n★ Krispig yta\n★ Dippa och dela\n★ Punch utan tyngd"
+    },
+    {
+      "slug": "havets-vans",
+      "name": "Havets Vän",
+      "keywords": [
+        "Mineral",
+        "Lätt",
+        "Havsbris"
+      ],
+      "match_dimensions": {
+        "fräsch": 65,
+        "syra": 60,
+        "umami": 55,
+        "fine": 50,
+        "comfort": 35,
+        "jordig": 20,
+        "hetta": 25,
+        "sötma": 20,
+        "street": 25,
+        "salt": 60
+      },
+      "horoscope_default": "**Mineral, lätthet och klar sältma**\nHavet i smakerna...\n★ Friskt och lätt\n★ Dill och citrus\n★ Klar sälta\n★ Kallt + varmt\n★ Små gester"
+    },
+    {
+      "slug": "veg-visionaren",
+      "name": "Veg Visionären",
+      "keywords": [
+        "Grönt",
+        "Kreativ",
+        "Hållbar"
+      ],
+      "match_dimensions": {
+        "fräsch": 70,
+        "jordig": 60,
+        "umami": 55,
+        "syra": 50,
+        "street": 40,
+        "hetta": 35,
+        "comfort": 35,
+        "fine": 40,
+        "sötma": 25,
+        "salt": 40
+      },
+      "horoscope_default": "**Grönt djup och kreativt lugn**\nMöjligheter i grönt...\n★ Grönt utan kompromiss\n★ Umami smart\n★ Kryddlager\n★ Textur som berättar\n★ Pigga avslut",
+      "horoscope": "Du sätter grönsaker i rampljuset utan att be om ursäkt. Du vet att ugnsvärme, stekyta och grill ger personlighet. Du bygger djup med svamp, soja, miso eller tomat och du använder bönor, linser, tofu eller tempeh för stadga. Du låter nötter och frön ge tugg och mättnad. Du toppar gärna med picklad lök, en grön sås eller något krämigt som binder ihop. Du väljer korn eller nudlar efter humör och väder. Du lånar kryddor från många håll men håller kursen tydlig. Du försöker inte övertyga, du bjuder. Du visar att en rostad blomkål kan ta lika mycket plats som en stek på ett annat bord. Du lämnar middagen med känslan att grön mat inte är alternativet, den är själva huvudnumret. Du gör om det nästa vecka och undrar mest varför du inte började tidigare.",
+      "image": "assets/share/kbsp-veg-visionaren.png"
+    },
+    {
+      "slug": "fest-fyrverkeriet",
+      "name": "Festfyrverkeriet",
+      "keywords": [
+        "Delux",
+        "Social",
+        "Show"
+      ],
+      "match_dimensions": {
+        "comfort": 55,
+        "street": 70,
+        "hetta": 75,
+        "umami": 60,
+        "syra": 45,
+        "fräsch": 40,
+        "fine": 35,
+        "jordig": 25,
+        "sötma": 50,
+        "salt": 55
+      },
+      "horoscope_default": "**Show, värme och generositet**\nSmakfyrverkerier...\n★ Delningsvänligt\n★ Flera hetta-nivåer\n★ Pigga syror\n★ Kreativa toppings\n★ Tydlig väg på tallriken"
+    },
+    {
+      "slug": "sotstarka-balanskonstnaren",
+      "name": "Den Sötstarka Balanskonstnären",
+      "keywords": [
+        "balans",
+        "fräscht",
+        "umami"
+      ],
+      "horoscope": "Du gillar när smaken börjar vänligt och slutar med ett litet leende. Du använder honung, frukt eller sirap för att runda av och du lyfter allt med lime eller vinäger. Du låter chili vara energigivare och inte hinderbana. Du penslar glaze sent, smakar av ofta och lägger på syra precis före servering. Du bygger textur med rostade frön, knaprig lök eller krispiga grönsaker. Du låter proteinet vara öppet för förslag, tofu och halloumi trivs sida vid sida med lax eller kyckling. Du tycker om när tallriken ser glad ut och när såsen får glänsa utan att ta över. Du gör vardag till helg med en tesked på rätt ställe. Du behöver inga fyrverkerier för att det ska bli minnesvärt. Du nöjer dig när gommen nickar och alla tar en liten sked extra, bara för att kontrollera att balansen fortfarande sitter som den ska.",
+      "image": "assets/share/kbsp-sotstarka-balanskonstnaren.png"
+    },
+    {
+      "slug": "latta-vardagskocken",
+      "name": "Den Lätta Vardagskocken",
+      "keywords": [
+        "balans",
+        "fräscht",
+        "umami"
+      ],
+      "horoscope": "Du har ett eget körfält i mataffären och du använder det. Du plockar fem bra saker och är hemma före nyheterna. Du gillar frysta grönsaker, bra buljong, färdigkokta bönor och en panna som redan är varm. Du skär smått så att allt blir klart samtidigt. Du gör snabba såser på yoghurt, tahini eller miso och du bryter av med citron och örter. Du rostar ströbröd eller nötter för ett litet knaster som känns proffsigt. Du låter proteinet vara opportunist, ägg eller tofu eller fisk dyker upp när det passar. Du serverar i skål för att livet är kort och disken blir snäll. Du städar medan du lagar och lämnar köket med gott humör. Du mäter inte mat i minuter utan i lättnad. Du kallar det vardag och alla runt bordet kallar det middag. Du sparar receptet i huvudet och gör det igen innan veckan är slut.",
+      "image": "assets/share/kbsp-latta-vardagskocken.png"
+    },
+    {
+      "slug": "hogtidsplaneraren",
+      "name": "Den Festliga Högtidsplaneraren",
+      "keywords": [
+        "balans",
+        "fräscht",
+        "umami"
+      ],
+      "horoscope": "Du tänker i menyer och inte i enskilda rätter. Du bygger fat där något krispigt möter något krämigt och något syrligt håller ordning. Du förbereder dagen innan, låter ugnen göra grovjobbet och väljer en dessert som sköter sig själv. Du använder citruszest, örter och brynt smör med generös precision. Du låter proteinet variera och ger grönsakerna applåder. Du ställer fram bröd och gott smör som om det vore service. Du matchar dryck efter stämning, och bubblor visar sig ofta vara den enklaste lösningen. Du bygger tempo över kvällen så att allt känns lugnt. Du bjuder in hjälp i köket och släpper kontrollen där den inte behövs. Du jagar inte perfekt, du siktar på generöst. Du njuter när gäster tar om och när någon ber om receptet. Du ler och säger att det verkar krångligare än det är.",
+      "image": "assets/share/kbsp-hogtidsplaneraren.png"
+    },
+    {
+      "slug": "streetfood-entusiasten",
+      "name": "Streetfood-entusiasten",
+      "keywords": [
+        "balans",
+        "fräscht",
+        "umami"
+      ],
+      "horoscope": "Du vill ha smak som inte kräver manual. Du gillar handhållna format och bord som ser ut som en liten marknad. Du marinerar snabbt och varmt, fräser hårt och kort och bygger ihop allt på slutet. Du använder lime, picklad lök, örter och chilisås för pigg energi. Du låter tortillas, pitabröd, risnudlar eller ris vara scenen. Du väljer tofu, svamp, kycklinglår eller färs beroende på dagsform. Du strör över jordnötter eller rostade frön för att få knaster. Du låter alla montera själva och accepterar att det droppar lite. Du ställer fram extra servetter och ekstra sås. Du lagar mycket på liten yta och trivs med tempo. Du blir glad när någon säger att de tar en till innan de är klara med den första. Du nickar och tar en du också.",
+      "image": "assets/share/kbsp-streetfood-entusiasten.png"
+    },
+    {
+      "slug": "fina-smaker",
+      "name": "Fina Smaker",
+      "keywords": [
+        "balans",
+        "fräscht",
+        "umami"
+      ],
+      "horoscope": "Du väljer råvaror när de verkligen smakar. Du blancherar snabbt, rostar varsamt och låter ugnen arbeta utan stress. Du använder vin, bra vinäger eller citron för att väcka rätten. Du bygger umami med buljong, svamp, miso eller lagrad ost. Du saltar med fokus och smakar av tills det sitter. Du serverar hellre lite mindre men väldigt gott. Du låter textur göra jobbet, krispigt bredvid mjukt och varmt bredvid svalt. Du lägger saker prydligt för att det blir roligare att äta så. Du dricker det som passar stunden och inte det som någon tabell föreslår. Du tycker att enkelhet kräver lite disciplin och du trivs med det. Du låter maten tala i normalt tonläge och ändå hörs allt. Du skrapar tallriken med en bit bröd och kallar det research.",
+      "image": "assets/share/kbsp-fina-smaker.png"
+    },
+    {
+      "slug": "jordig-utforskare",
+      "name": "Jordig Utforskare",
+      "keywords": [
+        "balans",
+        "fräscht",
+        "umami"
+      ],
+      "horoscope": "Du gräver i skafferiet som om det vore en trädgård. Du rostar rotsaker tills kanterna blir mörka och mitten blir mild. Du ger svamp utrymme och bygger fond med lök, tomat, miso eller soja. Du använder långsam ugn och snälla sjudningar för att allt ska landa. Du lägger i korn, ris eller matvete för stabilitet. Du skär grönkål tunt och låter den landa i slutet. Du toppar med något friskt som persilja och citron. Du kryddar med rosmarin, timjan och peppar utan att skrika. Du vet att gryta dag två smakar oväntat bra. Du serverar i stora skålar och låter alla ta om. Du äter långsamt och blir lugn. Du tycker att mat kan kännas som skogspromenad utan kottar i skorna. Du avslutar med en skvätt syra så att allt får en sista knuff.",
+      "image": "assets/share/kbsp-jordig-utforskare.png"
+    },
+    {
+      "slug": "comfort-alskaren",
+      "name": "Comfort-älskaren",
+      "keywords": [
+        "balans",
+        "fräscht",
+        "umami"
+      ],
+      "horoscope": "Du jagar inte wow, du jagar ah. Du gillar krämighet, mild hetta och rund sälta som får axlarna att sjunka. Du lagar pasta, risotto, gratänger och grytor som om diskmaskinen fick provision. Du ger löken tid, låter tomaten koka ner och använder buljong som ryggrad. Du är vän med smör och olivolja och fiende med torr mat. Du toppar med något krispigt och något friskt så att skålen får energi. Du låter proteinet vara snällt, bönor och svamp funkar fint, kyckling och fisk också. Du serverar på djup tallrik och tar ofta en sked först. Du tycker att rester är en superkraft och att mikron är en vän. Du tar en paus mellan tugga tre och fyra och hinner andas. Du vet att trygg mat inte är lat, den är omtänksam. Du bjuder in grannar och låter soffan sköta efterrätten.",
+      "image": "assets/share/kbsp-comfort-alskaren.png"
+    }
+  ]
+}
