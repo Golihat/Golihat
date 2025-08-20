@@ -12,6 +12,57 @@
       "sötma": {},
       "salt": {}
     }
+    ,
+    "products": [
+      {
+        "id": "p1",
+        "title": "Rökig BBQ-krydda",
+        "excerpt": "Ger din grillmat djup rökighet och sötma.",
+        "image": "assets/img/placeholder.png",
+        "keywords": ["rökig","grill","sötma","hetta"],
+        "url": "#/product/rokig-bbq-krydda"
+      },
+      {
+        "id": "p2",
+        "title": "Citron & Örter-krydda",
+        "excerpt": "Friskör och syra för sommardagar.",
+        "image": "assets/img/placeholder.png",
+        "keywords": ["fräsch","citrus","örter"],
+        "url": "#/product/citron-och-orter"
+      },
+      {
+        "id": "p3",
+        "title": "Umami-mix",
+        "excerpt": "Extra djup och fyllighet för grytor.",
+        "image": "assets/img/placeholder.png",
+        "keywords": ["umami","grytor","jordig"],
+        "url": "#/product/umami-mix"
+      },
+      {
+        "id": "p4",
+        "title": "Het Chili-blandning",
+        "excerpt": "Eld och värme för den som gillar sting.",
+        "image": "assets/img/placeholder.png",
+        "keywords": ["hetta","chili","street"],
+        "url": "#/product/het-chili-blandning"
+      },
+      {
+        "id": "p5",
+        "title": "Sötstark Glaze",
+        "excerpt": "Förtjockad glaze som ger karamelliserad yta.",
+        "image": "assets/img/placeholder.png",
+        "keywords": ["sötma","glaze","grill"],
+        "url": "#/product/sotstark-glaze"
+      },
+      {
+        "id": "p6",
+        "title": "Örtsalt",
+        "excerpt": "En enkel krydda för vardagsmatens magi.",
+        "image": "assets/img/placeholder.png",
+        "keywords": ["salt","fräsch","vardag"],
+        "url": "#/product/ortsalt"
+      }
+    ]
   },
   "questions": [
     {
