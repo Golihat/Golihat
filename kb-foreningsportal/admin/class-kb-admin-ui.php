@@ -23,11 +23,12 @@ class KB_FP_Admin_UI {
     }
 
     public function register_settings() {
-        register_setting( 'kb_fp_features', 'kb_fp_features' );
+        register_setting( 'kb_fp_features', 'kb_fp_features', 'kb_fp_sanitize_features' );
     }
 
     public function render_setup_page() {
-        $features = get_option( 'kb_fp_features', array() );
+        $features = kb_fp_get_feature_options( $this->modules );
+        $defaults = kb_fp_get_feature_defaults( $this->modules );
         include KB_FP_PLUGIN_DIR . 'admin/views/admin-settings.php';
     }
 }

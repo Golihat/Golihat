@@ -3,24 +3,20 @@
  * Organisation logic and endpoints.
  */
 class KB_FP_Orgs extends KB_FP_REST_Controller {
+    protected $resource     = 'orgs';
     protected $feature_flag = 'features.orgs.enabled';
 
-    public function get_feature_flag() {
-        return $this->feature_flag;
-    }
-
-    public function register_routes() {
-        register_rest_route( $this->get_namespace(), '/orgs', array(
+    protected function get_mock_response() {
+        return array(
             array(
-                'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( $this, 'get_items' ),
-                'permission_callback' => array( $this, 'permission_callback' ),
+                'id'          => 1,
+                'name'        => 'Exempelförening',
+                'campaigns'   => 0,
+                'provision'   => 0,
+                'status'      => 'draft',
+                'featureFlag' => $this->feature_flag,
             ),
-        ) );
-    }
-
-    public function get_items( WP_REST_Request $request ) {
-        return rest_ensure_response( array() );
+        );
     }
 }
 

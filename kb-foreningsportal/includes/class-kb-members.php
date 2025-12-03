@@ -3,24 +3,19 @@
  * Member management.
  */
 class KB_FP_Members extends KB_FP_REST_Controller {
+    protected $resource     = 'members';
     protected $feature_flag = 'features.members.enabled';
 
-    public function get_feature_flag() {
-        return $this->feature_flag;
-    }
-
-    public function register_routes() {
-        register_rest_route( $this->get_namespace(), '/members', array(
+    protected function get_mock_response() {
+        return array(
             array(
-                'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( $this, 'get_items' ),
-                'permission_callback' => array( $this, 'permission_callback' ),
+                'id'          => 1,
+                'org_id'      => 1,
+                'name'        => 'Demo Medlem',
+                'email'       => 'member@example.com',
+                'featureFlag' => $this->feature_flag,
             ),
-        ) );
-    }
-
-    public function get_items( WP_REST_Request $request ) {
-        return rest_ensure_response( array() );
+        );
     }
 }
 

@@ -3,24 +3,19 @@
  * Internal notifications.
  */
 class KB_FP_Notifications extends KB_FP_REST_Controller {
+    protected $resource     = 'notifications';
     protected $feature_flag = 'features.notifications.enabled';
 
-    public function get_feature_flag() {
-        return $this->feature_flag;
-    }
-
-    public function register_routes() {
-        register_rest_route( $this->get_namespace(), '/notifications', array(
+    protected function get_mock_response() {
+        return array(
             array(
-                'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( $this, 'get_items' ),
-                'permission_callback' => array( $this, 'permission_callback' ),
+                'id'          => 1,
+                'type'        => 'info',
+                'message'     => 'Systemet är igång.',
+                'created_at'  => current_time( 'mysql' ),
+                'featureFlag' => $this->feature_flag,
             ),
-        ) );
-    }
-
-    public function get_items( WP_REST_Request $request ) {
-        return rest_ensure_response( array() );
+        );
     }
 }
 

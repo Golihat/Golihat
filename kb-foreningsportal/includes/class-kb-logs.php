@@ -3,24 +3,18 @@
  * Logging and diagnostics.
  */
 class KB_FP_Logs extends KB_FP_REST_Controller {
+    protected $resource     = 'logs';
     protected $feature_flag = 'features.logs.enabled';
 
-    public function get_feature_flag() {
-        return $this->feature_flag;
-    }
-
-    public function register_routes() {
-        register_rest_route( $this->get_namespace(), '/logs', array(
+    protected function get_mock_response() {
+        return array(
             array(
-                'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( $this, 'get_items' ),
-                'permission_callback' => array( $this, 'permission_callback' ),
+                'id'          => 1,
+                'message'     => 'Loggning initierad.',
+                'created_at'  => current_time( 'mysql' ),
+                'featureFlag' => $this->feature_flag,
             ),
-        ) );
-    }
-
-    public function get_items( WP_REST_Request $request ) {
-        return rest_ensure_response( array() );
+        );
     }
 }
 

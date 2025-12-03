@@ -4,23 +4,64 @@
  */
 
 function kb_fp_is_feature_enabled( $flag ) {
-    $options = get_option( 'kb_fp_features', array() );
+    $options = kb_fp_get_feature_options();
     return isset( $options[ $flag ] ) ? (bool) $options[ $flag ] : true;
 }
 
-function kb_fp_create_default_options() {
+function kb_fp_get_feature_defaults( $modules = array() ) {
     $defaults = array(
-        'features.orgs.enabled'          => true,
-        'features.admins.enabled'        => true,
-        'features.campaigns.enabled'     => true,
-        'features.provision.enabled'     => true,
-        'features.orders.enabled'        => true,
-        'features.members.enabled'       => false,
-        'features.materials.enabled'     => true,
-        'features.qr.auto_generate'      => true,
-        'features.logs.enabled'          => true,
-        'features.notifications.enabled' => true,
+        'features.orgs.enabled'                   => true,
+        'features.admins.enabled'                 => true,
+        'features.campaigns.enabled'              => true,
+        'features.provision.enabled'              => true,
+        'features.orders.enabled'                 => true,
+        'features.members.enabled'                => false,
+        'features.materials.enabled'              => true,
+        'features.qr.auto_generate'               => true,
+        'features.logs.enabled'                   => true,
+        'features.notifications.enabled'          => true,
+        'features.materials.auto_generate_on_org_create' => true,
+        'features.email.automated_campaign_mails'        => true,
+        'features.admin_commission.enabled'               => true,
+        'features.stats.advanced_graphs'                  => true,
+        'features.support.diagnostics'                    => true,
+        'features.security.rate_limit_public'             => true,
     );
+
+    foreach ( $modules as $module ) {
+        if ( isset( $module['feature_flag'] ) && ! isset( $defaults[ $module['feature_flag'] ] ) ) {
+            $defaults[ $module['feature_flag'] ] = true;
+        }
+    }
+
+    return $defaults;
+}
+
+function kb_fp_get_feature_options( $modules = array() ) {
+    $defaults = kb_fp_get_feature_defaults( $modules );
+    $options  = get_option( 'kb_fp_features', array() );
+    $sanitized = array();
+
+    foreach ( $defaults as $key => $default ) {
+        $sanitized[ $key ] = isset( $options[ $key ] ) ? (bool) $options[ $key ] : (bool) $default;
+    }
+
+    return $sanitized;
+}
+
+function kb_fp_sanitize_features( $input ) {
+    $input = is_array( $input ) ? $input : array();
+    $clean = array();
+
+    foreach ( $input as $key => $value ) {
+        $clean[ $key ] = (bool) $value;
+    }
+
+    return $clean;
+}
+
+function kb_fp_create_default_options( $modules = array() ) {
+    $defaults = kb_fp_get_feature_defaults( $modules );
     add_option( 'kb_fp_features', $defaults );
 }
 
