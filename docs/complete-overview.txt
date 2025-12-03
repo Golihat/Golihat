@@ -1,0 +1,75 @@
+KRYDDBOX FÖRENINGSPORTAL – SAMMANFATTNING (SPEC + TILLÄGG)
+
+1) SYFTE OCH HUVUDIDÉ
+- Bygga en komplett WordPress-plugin med React-frontend där föreningar säljer föreningsboxar, ser statistik/material och följer provisioner. Kryddbox/Superadmin ska kunna administrera föreningar, admins och kampanjer. Systemet ska vara mobilt, modernt, automatiserat och driftsäkert.
+
+2) ROLLER
+- Superadmin: Full kontroll; sätter global och admin-provision; hanterar mallar, funktioner, kampanjer; kan “visa som användare”; kan aktivera/inaktivera alla moduler.
+- Admin: Ansvarar för tilldelade föreningar; får provision baserat på föreningsförsäljning; kan administrera sina föreningar; kan “visa som föreningsansvarig/moderator”.
+- Föreningsansvarig: Hanterar föreningens kampanj, medlemmar och material; ser försäljnings- och provisionsstatistik.
+- Föreningsmoderator: Kan se statistik, ladda ner material och lägga in offlineordrar.
+
+3) AUTOMATISERING (FÖRLÖPNING)
+- Vid skapande av förening: generera unik länk + kod, QR, affischer/flyers/SoMe-texter/mailmallar och standardkampanj.
+- Under kampanj: automatiska mail (start/mitten/slut), automatisk orderkoppling via länk/kod/QR, realtidsstatistik.
+- Efter kampanj: automatiserad rapport till förening och underlag för provision till förening + admin.
+
+4) PROVISIONSSYSTEM
+- Förening: provision per box (globalt eller per förening).
+- Admin: modell väljs av Superadmin (fast belopp per box, procent av föreningens provision eller trappmodell). Admin-dashboard visar total försäljning, provision och föreningsresultat.
+
+5) FRONTEND (REACT)
+- Design: modernt, stilrent, mobilanpassat; kort/grafer/QR/material lättillgängligt.
+- Admin-portal: dashboard, föreningar, admins, kampanjer, rapporter, inställningar.
+- Föreningsportal: dashboard, medlemmar, material, kampanjinfo.
+- Återanvändbara komponenter: StatsCard, ChartBlock/SalesChart, QRCard, MaterialCard, DataTable/Table, DiagnosticsPanel, layout (AdminLayout/OrgLayout/NavBar) och UI-element (Button/Card/Modal m.m.).
+
+6) SUPPORTFUNKTIONER
+- “Visa som användare” (Superadmin kan se alla, Admin sina föreningar).
+- Loggar över alla ändringar (kb_logs) och diagnostik-panel.
+- Lista med osynkade ordrar; notiser för viktiga händelser.
+- Snabbåtgärder: regenerera QR, skicka om mail, låsa upp konton, koppla ordrar.
+
+7) DATABASEMODELL (KORT)
+- Egna tabeller: kb_orgs, kb_admins, kb_campaigns, kb_org_provision, kb_order_link, kb_members, kb_sales_aggregates, kb_admin_commissions, kb_material_templates, kb_generated_material, kb_qr_codes, kb_logs, kb_notifications.
+
+8) API (REST, t.ex. /wp-json/kb-forening/v1/)
+- Endpoints för organisationer, kampanjer, statistik (summary/timeseries), medlemmar, material & QR, provision (förening + admin), support (loggar/diagnostik/osynkade ordrar).
+
+9) FEATURE TOGGLES
+- Lagrade i inställning eller tabell; styrs av Superadmin: features.members.enabled, features.qr.auto_generate, features.materials.auto_generate_on_org_create, features.email.automated_campaign_mails, features.admin_commission.enabled, features.stats.advanced_graphs.
+
+10) UTVECKLINGSPLAN (HÖGNIVÅ)
+- Skapa pluginstruktur → skapa tabeller vid aktivering → bygg REST API → bygg React-frontend → WooCommerce-orderintegration → provisionslogik → support/loggar/”visa som” → optimering/caching/UI-finslipning.
+
+11) KODNINGSREGLER
+- Ändra bara det nödvändiga; minimal och isolerad påverkan; bakåtkompatibilitet; ny funktionalitet bakom feature toggles; säkra SQL (preparerade statements); logga strukturella ändringar i kb_logs; använd Git med tydliga commit-meddelanden; ingen refaktorering om inte absolut nödvändigt.
+
+12) FILSTRUKTUR (WP-PLUGIN + REACT)
+- /kb-foreningsportal/kb-foreningsportal.php (loader/hooks); includes/* (klasser för orgs/admins/kampanjer/provision/orders/members/material/qr/logs/notifications/helpers/hooks); admin/views (dashboards, settings, orglist/detail); public (shortcodes, enqueue, css/js); assets/js+css (bundlad React för admin/org); react-app/src (components/pages/api/hooks/context/styles). Shortcode/block renderar div #kb-portal-root med data-mode org/admin.
+
+13) MODULÄR PLUGIN-ARKITEKTUR (TILLÄGG)
+- Huvudplugin: bootstrap + registrerar moduler + renderar setup-sida.
+- Moduler (egna klasser/mappar) med livscykel-API: id/label/description/depends_on + register/boot/deactivate; status kan användas för health-checks.
+- KB_Module_Manager: registrerar moduler, kör boot bara om flagga aktiv och validerar beroenden.
+- KB_Feature_Flags: lagring/cachning i tabell (t.ex. kb_feature_flags med enabled/updated_at/updated_by) och fallback till befintliga flaggor för bakåtkompatibilitet.
+- Setup-sida för superadmin: meny “Kryddbox » Setup & funktioner”; kort per modul med switch, beskrivning, beroenden, status, snabblänkar (regenerera QR, skicka testmail m.m.), logg av ändringar (kb_logs). Toggle via REST-endpoint med nonce + capability manage_options; bekräftelsemodal för moduler med databaspåverkan; health-check visar varningar/fel.
+- Avstängning rensar cron/queue/transients via deactivate(); alla toggle-ändringar loggas med vem/vad/före-efter/IP.
+- Migrering: init-script mappar befintliga feature toggles till tabellen och behåller läsning av gamla optioner tills avvecklat.
+- Föreslagen implementationsordning: 1) Lägg till manager/feature flag-tabell, 2) bryt ut delsystem till moduler, 3) bygg setup-sida, 4) lägg till status/health-check, 5) testa aktivera/deaktivera.
+
+14) EXTRA FÖRBÄTTRINGAR (TILLÄGG)
+- Fältversionering/revisionshistorik för kritiska uppgifter (provision, kampanjdatum, status) med tabell kb_field_revisions; viewer + återställning bakom toggle.
+- API-policys per roll (access-matris och middleware som verifierar roll/ägarskap; tester för policys).
+- Rate limiting/spam-skydd för offentliga endpoints (per IP/länk, larm vid hög frekvens).
+- Signerade/tidsbegränsade material-länkar via proxy-endpoint och tokens.
+- Bakgrundsjobb/queues för tunga mail/material/rapporter (WP Cron/Action Scheduler/extern queue) bakom toggle + statusvy.
+- Självservice-reparationer i diagnostik (återkoppla order, regenerera QR, återpublicera material) med loggning.
+- GDPR/PII-skydd: maskning i loggar/diagnostik, export- och raderingsflöde per medlem, retention/auto-purge.
+- Observability/larm: health-endpoint, metrik (latens/fel/queue), notiser vid fel/anomali kopplat till kb_notifications.
+- Bulkuppladdning: CSV-import för medlemmar och batch offlineordrar med validering/återkoppling och historik.
+- Read-only granskarroll (revision): läsbehörighet till rapporter/provision, blockera skrivningar och visa read-only badge.
+- Backup/restore-rutiner för egna tabeller, snapshot före schemaändring och testad återställning.
+
+15) HELHETSBILD
+- Slutmålet är ett modulärt, säkert och driftsäkert plugin där Superadmin kan slå på/av funktioner, övervaka hälsa och logga ändringar, medan användarna får en smidig portal med automatisering, statistik och materialstöd. Alla förbättringar ovan kan införas stegvis bakom toggles för att bevara stabilitet.
