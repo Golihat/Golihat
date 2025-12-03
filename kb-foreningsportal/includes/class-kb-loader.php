@@ -16,6 +16,9 @@ class KB_FP_Loader {
     public function __construct() {
         require_once KB_FP_PLUGIN_DIR . 'includes/functions-kb-helpers.php';
         require_once KB_FP_PLUGIN_DIR . 'includes/functions-kb-hooks.php';
+        if ( ! class_exists( 'WP_REST_Controller' ) && file_exists( ABSPATH . 'wp-includes/rest-api/endpoints/class-wp-rest-controller.php' ) ) {
+            require_once ABSPATH . 'wp-includes/rest-api/endpoints/class-wp-rest-controller.php';
+        }
         require_once KB_FP_PLUGIN_DIR . 'includes/class-kb-rest-controller.php';
         require_once KB_FP_PLUGIN_DIR . 'includes/class-kb-orgs.php';
         require_once KB_FP_PLUGIN_DIR . 'includes/class-kb-admins.php';
@@ -33,10 +36,12 @@ class KB_FP_Loader {
 
     public function run() {
         $this->register_modules();
-        $this->admin_ui = new KB_FP_Admin_UI( $this->modules );
+        if ( is_admin() ) {
+            $this->admin_ui = new KB_FP_Admin_UI( $this->modules );
+        }
         $this->public_ui = new KB_FP_Public();
 
-        add_action( 'init', array( $this, 'register_rest_controllers' ) );
+        add_action( 'rest_api_init', array( $this, 'register_rest_controllers' ) );
         add_action( 'init', array( $this, 'register_shortcodes' ) );
         kb_fp_register_common_hooks();
     }
