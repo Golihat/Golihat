@@ -9,6 +9,7 @@ class KB_FP_Admin_UI {
         $this->modules = $modules;
         add_action( 'admin_menu', array( $this, 'register_menu' ) );
         add_action( 'admin_init', array( $this, 'register_settings' ) );
+        add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_assets' ) );
     }
 
     public function register_menu() {
@@ -24,6 +25,15 @@ class KB_FP_Admin_UI {
 
     public function register_settings() {
         register_setting( 'kb_fp_features', 'kb_fp_features', 'kb_fp_sanitize_features' );
+    }
+
+    public function enqueue_assets( $hook ) {
+        if ( 'toplevel_page_kb-foreningsportal' !== $hook ) {
+            return;
+        }
+
+        wp_enqueue_style( 'kb-fp-portal', KB_FP_PLUGIN_URL . 'assets/css/portal.css', array(), KB_FP_VERSION );
+        wp_enqueue_script( 'kb-fp-portal-admin', KB_FP_PLUGIN_URL . 'assets/js/portal-admin.bundle.js', array(), KB_FP_VERSION, true );
     }
 
     public function render_setup_page() {
